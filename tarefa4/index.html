@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div class="fundo">
+    <div class = "centro">
+
+        <h1>Calculadora básica</h1>
+        <div class="culun">
+        <input id = "num1" type = "number"/><< Valor 1
+        <input id = "num2" type = "number"/><< Valor 2
+        </div>
+        <div class="operador">
+       <button onclick="calc('+')">Somar</button>
+       <button onclick="calc('*')">Multiplicar</button>
+        </div>
+        <div class="operador2">
+       <button onclick="calc('/')">Dividir</button>
+       <button onclick="calc('-')">Subtrair</button>
+        </div> 
+        <div>
+       <input id = "result" type="number" readonly/><< Resultado
+        </div>
+        
+        
+    </div>
+    <div class="espaca"></div>
+
+        <div>Histórico</div>
+        
+        <div id = "history"></div>
+        <div class="espaca"></div>
+  
+       
+     <div class="CLEAR"></div>
+    
+    <script>
+        function calc(op){
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            if(op=='+'){
+                var valor = num1 + num2;
+                document.getElementById("result").value = valor;
+                console.log(result);
+                document.getElementById("history").innerHTML += "<br>" + num1 +"+"+ num2 + "=" + valor;
+            }
+            if(op=='*'){
+                var valor = num1 * num2;
+                document.getElementById("result").value = valor;
+                console.log(result);
+                document.getElementById("history").innerHTML += "<br>" + num1 +"*"+ num2 + "=" + valor;
+            }
+            if(op=='-'){
+                var valor = num1 - num2;
+                document.getElementById("result").value = valor;
+                console.log(result);
+                document.getElementById("history").innerHTML += "<br>" + num1 +"-"+ num2 + "=" + valor;
+            }
+            if(op=='/'){
+                var valor = num1 / num2;
+                document.getElementById("result").value = valor.toFixed(2);
+                console.log(result);
+                document.getElementById("history").innerHTML += "<br>" + num1 +"/"+ num2 + "=" + valor.toFixed(2);
+            }
+            
+            
+            
+            
+            
+
+        }
+
+
+    </script>
+    </div>
+    
+</div>
+    
+</body>
+</html>
