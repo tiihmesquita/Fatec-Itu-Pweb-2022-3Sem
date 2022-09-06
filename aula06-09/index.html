@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Calculadora básica</h1>
+        <input id = "num1" type = "number"/>
+        <input id = "num2" type = "number"/>
+       <button onclick="somar()">Soma</button>
+        <input id = "soma" type="number" readonly/>
+        <div id = "history"></div>
+
+    </div>
+    <script>
+        function somar(){
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var soma = num1 + num2;
+            
+            document.getElementById("soma").value = soma;
+            console.log(soma);
+            document.getElementById("history").innerHTML += "<br>"+soma;
+
+        }
+
+
+    </script>
+</body>
+</html>
